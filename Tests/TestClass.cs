@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using SourceLib;
+using System.Diagnostics;
 
 namespace Tests
 {
@@ -17,6 +18,12 @@ namespace Tests
         public void IntentionalFailure()
         {
             Assert.True(false);
+        }
+
+        [Fact]
+        public void UseFxc()
+        {
+            Process.Start("fxc");
         }
     }
 }
